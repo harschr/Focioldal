@@ -7,9 +7,10 @@ import { ManUtd } from './man-utd/man-utd';
 import { PL } from './pl/pl';
 import { Vidi } from './vidi/vidi';
 import { NbII } from './nb-ii/nb-ii';
+import { Hiba } from './hiba/hiba';
 
 @NgModule({
-  declarations: [App, ManUtd, PL, Vidi, NbII],
+  declarations: [App, ManUtd, PL, Vidi, NbII, Hiba],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners(), provideClientHydration()],
   bootstrap: [App],
