@@ -11,8 +11,8 @@ const routes: Routes = [
 {path: "pl", component: PL},
 {path: "vidi", component: Vidi},
 {path: "nbII", component: NbII},
-{path:"", redirectTo: "/manutd", pathMatch:"full"},
-{path:"**", component: Hiba}
+/*{path:"", redirectTo: "/manutd", pathMatch:"full"},
+{path:"**", component: Hiba}*/
 ];
 
 @NgModule({
