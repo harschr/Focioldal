@@ -92,7 +92,8 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "dir": "dist/Focioldal/browser"
+            "dir": "dist/Focioldal/browser",
+            "baseHref": "/Focioldal/"
           }
         }
       }
