@@ -28,7 +28,7 @@
 .match_box {
     margin: 25px 0 25px 0;
 }
-
+/*
 .result{
     background-color: rgb(26,26,26) !important;
     color: white !important;
@@ -44,10 +44,10 @@
     width: 24px;
     height: 24px;
     object-fit: contain;
-}
+}*/
 
 /*CHAT GPT */
-.match {
+/*.match {
     padding: 8px 12px;
     border-bottom: 1px solid #ddd;
 }
@@ -86,4 +86,82 @@
     height: 28px;
     object-fit: contain;
 }
+
+@media (max-width: 576px) {
+
+    .match {
+        width: 100%;
+    }
+
+    .match ul {
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    .match li {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .result {
+        white-space: nowrap;
+    }
+}*/
+
+@media (max-width: 576px) {
+
+    .team {
+        gap: 4px;
+        font-size: 14px;
+    }
+
+    .result {
+        flex: 0 0 50px;
+    }
+
+    .logo {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.match {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.team {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.home {
+    justify-content: flex-end;
+}
+
+.away {
+    justify-content: flex-start;
+}
+
+.result {
+    flex: 0 0 60px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.logo {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+
 

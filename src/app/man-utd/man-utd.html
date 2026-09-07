@@ -4,100 +4,33 @@
     <br><br>
     <h3 class="title">Mérkőzések</h3>
 
-    <p class="month">2026 augusztus</p>
+    <div *ngFor="let month of matches">
+        <p class="month">{{month.month}}</p>
 
-    <div class="match_box">
-        <div class="date_competition">
-            <span><span>Aug. 22., szombat </span></span>
-            <span>|</span>
-            <span> Premier League</span>
-        </div>
+        <div *ngFor="let match of month.games" class="match_box">
 
-        <div class="match">
-            <ul class="list-group list-group-horizontal">
-                <li class="col-5 list-group-item border-0 text-end home">
-                    Hull City
-                    <img src="logos/hull-city-logo-footylogos-320.webp" class="logo" alt="Hull" title="Hull">
-                </li>
-                <li class="col-1 list-group-item border-0 text-center result">2:0</li>
-                <li class="col-5 list-group-item border-0 text-start away fw-bold">
-                    <img src="logos/mu.png" class="logo" alt="Man Utd" title="Man Utd">
-                    Man Utd
-                </li>
-            </ul>
-        </div>
-    </div>
+            <div class="date_competition">
+                <span>{{match.date}}</span>
+                <span> | </span>
+                <span>{{match.competition}}</span>
+            </div>
 
-    <div class="match_box">
-        <div class="date_competition">
-            <span><span>Aug. 30., vasárnap </span></span>
-            <span>|</span>
-            <span> Premier League</span>
-        </div>
+            <div class="match">
 
-        <div class="match">
-            <ul class="list-group list-group-horizontal">
-                <li class="col-5 list-group-item border-0 text-end home fw-bold">
-                    Man Utd
-                    <img src="logos/mu.png" class="logo" alt="Man Utd" title="Man Utd">
-                </li>
-                <li class="col-1 list-group-item border-0 text-center result">5:2</li>
-                <li class="col-5 list-group-item border-0 text-start away">
-                    <img src="logos/ipswich-town.webp" class="logo" alt="Ipswich"
-                        title="Ipswich">
-                    Ipswich Town
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+                <div class="team home">
+                    <span>{{ match.home }}</span>
+                    <img [src]="match.homeLogo" class="logo" [alt]="match.home">
+                </div>
 
-<div class="monthly_fixtures">
+                <div class="result">
+                    {{ match.result }}
+                </div>
 
-    <p class="month">2026 szeptember</p>
-
-    <div class="match_box">
-        <div class="date_competition">
-            <span><span>Szept. 6., vasárnap </span></span>
-            <span>|</span>
-            <span> Premier League</span>
-        </div>
-
-        <div class="match">
-            <ul class="list-group list-group-horizontal">
-                <li class="col-5 list-group-item border-0 text-end home">
-                    Everton FC
-                    <img src="logos/everton.png" class="logo" alt="Everton" title="Everton">
-                </li>
-                <li class="col-1 list-group-item border-0 text-center result">2:2</li>
-                <li class="col-5 list-group-item border-0 text-start away fw-bold">
-                    <img src="logos/mu.png" class="logo" alt="Man Utd" title="Man Utd">
-                    Man Utd
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="match_box">
-        <div class="date_competition">
-            <span><span>Szept. 10., csütörtök </span></span>
-            <span>|</span>
-            <span> Champions League</span>
-        </div>
-
-        <div class="match">
-            <ul class="list-group list-group-horizontal">
-                <li class="col-5 list-group-item border-0 text-end home fw-bold">
-                    Man Utd
-                    <img src="logos/mu.png" class="logo" alt="Man Utd" title="Man Utd">
-                </li>
-                <li class="col-1 list-group-item border-0 text-center result">21:00</li>
-                <li class="col-5 list-group-item border-0 text-start away">
-                    <img src="logos/sabah.webp" class="logo" alt="Sabah"
-                        title="Sabah">
-                    Sabah
-                </li>
-            </ul>
+                <div class="team away">
+                    <img [src]="match.awayLogo" class="logo" [alt]="match.away">
+                    <span>{{ match.away }}</span>
+                </div>
+            </div>
         </div>
     </div>
 </div>
