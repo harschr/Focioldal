@@ -54,8 +54,8 @@ export class ManUtd {
           away: "Sabah",
           homeLogo: "logos/mu.png",
           awayLogo: "logos/sabah.webp",
-          result: "21:00",
-          played: false
+          result: "4:0",
+          played: true
         }
       ]
     }
