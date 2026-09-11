@@ -56,6 +56,26 @@ export class ManUtd {
           awayLogo: "logos/sabah.webp",
           result: "4:0",
           played: true
+        },
+         {
+          date: "Szept. 13., vasárnap",
+          competition: "Premier League",
+          home: "Man Utd",
+          away: "Man City",
+          homeLogo: "logos/mu.png",
+          awayLogo: "logos/mancity.png",
+          result: "17:30",
+          played: false
+        },
+         {
+          date: "Szept. 16., szerda",
+          competition: "League Cup",
+          home: "Man Utd",
+          away: "Brighton",
+          homeLogo: "logos/mu.png",
+          awayLogo: "logos/brighton.png",
+          result: "21:00",
+          played: false
         }
       ]
     }
