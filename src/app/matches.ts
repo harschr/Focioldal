@@ -16,6 +16,7 @@ export class Matches {
   }
 
   getMatches() {
-    return this.http.get<Match[]>("http://localhost:3000/api/matches");
+   // return this.http.get<Match[]>("http://localhost:3000/api/matches"); //ez még a saját gépen keresi az api-t
+   return this.http.get<Match[]>("https://manutd-api.onrender.com/api/matches"); // renderes api
   }
 }
