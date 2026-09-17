@@ -80,7 +80,8 @@ export class ManUtd {
             group.games.push(match);
           }
 
-          console.log(JSON.stringify(this.groupedMatches));
+          //console.log(JSON.stringify(this.groupedMatches));
+          console.log("CSOPORTOSÍTOTT:", JSON.stringify(this.groupedMatches, null, 2));
         }
 
 
