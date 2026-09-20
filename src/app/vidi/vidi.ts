@@ -33,7 +33,15 @@ export class Vidi {
   ];
 
   teamLogos: { [key: string]: string } = {
-    "Everton": "logos/everton.png",
+    "Kozármisleny": "logos/kozarmisleny.png",
+    "Kazincbarcika": "logos/kazincbarcika.png",
+    "Szeged": "logos/szeged.png",
+    "Kecskemét": "logos/kecskemet.png",
+    "Mezőkövesd": "logos/mezokovesd.png",
+    "Karcag": "logos/karcag.png",
+    "Diósgyőr": "logos/dvtk.png",
+    "Nagykanizsa": "logos/nagykanizsa.png",
+    "Videoton": "logos/videoton.webp",
   };
 
   constructor(private matchesService: Vidimatches) {
