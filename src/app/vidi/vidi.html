@@ -1,1 +1,52 @@
-<p>vidi works!</p>
+<p *ngIf="loading()">Meccsek betöltése...</p>
+<div *ngFor="let month of groupedMatches(); let i = index" class="monthly_fixtures">
+    <p class="month">{{month.month}}</p>
+
+    <div *ngFor="let match of month.games" class="match_box">
+
+        <div class="date_competition">
+            <span>{{ match.date | date: 'MMM. d., EEEE' : '' : 'hu'}}</span>
+            <span> | </span>
+            <span>{{ match.competition }}</span>
+        </div>
+
+        <div class="match">
+
+            <div class="team home">
+                <span>{{ match.home ? 'Videoton' : match.opponent }}</span>
+
+                @if (!match.home) {
+                <img [src]="teamLogos[match.opponent]" class="logo" [alt]="match.opponent">
+                }
+
+                @if (match.home) {
+                <img [src]="teamLogos['Videoton']" class="logo" alt="Videoton">
+                }
+
+            </div>
+
+            <div class="result">
+                <span>{{ match.status === 'played' && match.home
+                    ? match.vidiScore + ':' + match.opponentScore
+                    : match.status === 'played' && !match.home
+                    ? match.opponentScore + ':' + match.vidiScore :
+                    'Hamarosan' }}</span>
+            </div>
+
+            <div class="team away">
+                @if (match.home) {
+                <img [src]="teamLogos[match.opponent]" class="logo" [alt]="match.opponent">
+                }
+                @if (!match.home) {
+                <img [src]="teamLogos['Videoton']" class="logo" alt="Videoton">
+                }
+
+                <span>{{ match.home ? match.opponent : 'Videoton' }}</span>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

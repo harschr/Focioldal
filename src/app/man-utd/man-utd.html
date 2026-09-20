@@ -1,7 +1,9 @@
-<div *ngFor="let month of groupedMatches">
+<p *ngIf="loading()">Meccsek betöltése...</p>
+<div *ngFor="let month of groupedMatches(); let i = index" class="monthly_fixtures">
     <p class="month">{{month.month}}</p>
 
     <div *ngFor="let match of month.games" class="match_box">
+
         <div class="date_competition">
             <span>{{ match.date | date: 'MMM. d., EEEE' : '' : 'hu'}}</span>
             <span> | </span>
@@ -42,7 +44,7 @@
                 <span>{{ match.home ? match.opponent : 'Man Utd' }}</span>
 
 
-            </div>  
+            </div>
         </div>
 
     </div>

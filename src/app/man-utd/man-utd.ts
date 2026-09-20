@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Matches } from '../matches';
 import { Match } from '../match';
 import { MatchWithMonth } from '../match';
@@ -13,7 +13,9 @@ import { MatchWithMonth } from '../match';
 export class ManUtd {
   matches: Match[] = []; //eredeti tomb, ami jon az api-bol
   matchesWithMonth: MatchWithMonth[] = [];
-  groupedMatches: { month: string, games: Match[] }[] = [];
+
+  groupedMatches = signal<{ month: string, games: Match[] }[]>([]);
+  loading = signal(true);
 
   months = [
     "január",
@@ -39,58 +41,59 @@ export class ManUtd {
     "Brighton": "logos/brighton.png",
     "Fulham": "logos/fulham.png",
     "Man Utd": "logos/mu.png",
+    "Tottenham": "logos/tottenham.png",
+    "Leeds Utd": "logos/leeds.png",
+    "Atletico Madrid": "logos/atletico.png",
+    "Chelsea": "logos/chelsea.png",
+    "Bournemouth": "logos/bournemouth.png",
+    "Como": "logos/como.png",
+    "Liverpool": "logos/liverpool.png",
+    "Aston Villa": "logos/villa.png",
+    "Roma": "logos/roma.webp"
   };
 
-
-  /* constructor(private matchesService: Matches) {
-     this.matchesService.getMatches().subscribe(data => {
-       console.log(data);
-     });
-   }*/
-
-  //HIBAKERESÉSHEZ jobb ez: (amúgy ugyanazt csinálja, mint a fenti konstruktor)
   constructor(private matchesService: Matches) {
-    console.log("1. A konstruktor lefutott");
+
+    console.log("1. A konstruktor lefutott", this);
 
     this.matchesService.getMatches().subscribe({
-      next: data => {
+      next: (data: Match[]) => {
+
         this.matches = data.sort((a, b) => {
           return new Date(a.date).getTime() - new Date(b.date).getTime();
         });
+
         this.matchesWithMonth = this.matches.map(match => {
           return {
             ...match,
             month: this.months[new Date(match.date).getMonth()]
-          }
+          };
         });
 
+        const grouped: { month: string, games: Match[] }[] = [];
+
         for (const match of this.matchesWithMonth) {
-          const group = this.groupedMatches.find(
+
+          const group = grouped.find(
             group => group.month === match.month
           );
 
-          if (!group) {
-            this.groupedMatches.push({
+          if (group) {
+            group.games.push(match);
+          } else {
+            grouped.push({
               month: match.month,
               games: [match]
             });
           }
-
-          if (group) {
-            group.games.push(match);
-          }
-
-          //console.log(JSON.stringify(this.groupedMatches));
-          console.log("CSOPORTOSÍTOTT:", JSON.stringify(this.groupedMatches, null, 2));
         }
 
-
-        //console.log(this.matches);
-        //console.log(this.months[new Date(data[0].date).getMonth()]);
-        //console.log("2. Megérkezett az adat:");
-        //console.log(data);
+        // this.groupedMatches = grouped;
+        this.groupedMatches.set(grouped);
+        this.loading.set(false);
       },
-      error: err => {
+
+      error: (err: any) => {
         console.log("3. HIBA:");
         console.log(err);
       }
