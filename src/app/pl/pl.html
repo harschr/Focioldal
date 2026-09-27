@@ -1,1 +1,30 @@
-<p>pl works!</p>
+<p>Premier League tabella, 2026.09.20.</p>
+
+<table class="table table-striped">
+    <thead>
+        <th>Helyezés</th>
+        <th>Csapat</th>
+        <th>Mérkőzés</th>
+        <th>Győzelem</th>
+        <th>Döntetlen</th>
+        <th>Vereség</th>
+        <th>Rúgott gól</th>
+        <th>Kapott gól</th>
+        <th>Gólkülönbség</th>
+        <th>Pontszám</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of table">
+            <td>{{t.position}}</td>
+            <td>{{t.team}}</td>
+            <td>{{t.games}}</td>
+            <td>{{t.won}}</td>
+            <td>{{t.draw}}</td>
+            <td>{{t.lost}}</td>
+            <td>{{t.gf}}</td>
+            <td>{{t.ga}}</td>
+            <td>{{t.gd}}</td>
+            <td>{{t.points}}</td>
+        </tr>
+    </tbody>
+</table>
