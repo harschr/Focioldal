@@ -1,30 +1,43 @@
-<p>Premier League tabella, 2026.09.20.</p>
+<div class="container pl-container">
+    <h1>Premier League tabella, 2026.10.13.</h1>
 
-<table class="table table-striped">
-    <thead>
-        <th>Helyezés</th>
-        <th>Csapat</th>
-        <th>Mérkőzés</th>
-        <th>Győzelem</th>
-        <th>Döntetlen</th>
-        <th>Vereség</th>
-        <th>Rúgott gól</th>
-        <th>Kapott gól</th>
-        <th>Gólkülönbség</th>
-        <th>Pontszám</th>
-    </thead>
-    <tbody>
-        <tr *ngFor="let t of table">
-            <td>{{t.position}}</td>
-            <td>{{t.team}}</td>
-            <td>{{t.games}}</td>
-            <td>{{t.won}}</td>
-            <td>{{t.draw}}</td>
-            <td>{{t.lost}}</td>
-            <td>{{t.gf}}</td>
-            <td>{{t.ga}}</td>
-            <td>{{t.gd}}</td>
-            <td>{{t.points}}</td>
-        </tr>
-    </tbody>
-</table>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover mt-4">
+            <thead>
+                <tr>
+                    <th>Helyezés</th>
+                    <th>Csapat</th>
+                    <th>Mérkőzés</th>
+                    <th>Győzelem</th>
+                    <th>Döntetlen</th>
+                    <th>Vereség</th>
+                    <th>Rúgott gól</th>
+                    <th>Kapott gól</th>
+                    <th>Gólkülönbség</th>
+                    <th>Pontszám</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let t of table; let i = index" [ngClass]="{
+                    'gold': i === 0,
+                    'silver': i === 1,
+                    'bronze': i === 2
+                }">
+                    <td class="position">
+                        {{ i + 1 }}.</td>
+
+                    <td> <img [src]="t.logo" [alt]="t.name + ' címere'" width="25" height="25"> {{ t.name }} </td>
+
+                    <td>{{t.played}}</td>
+                    <td>{{t.wins}}</td>
+                    <td>{{t.draws}}</td>
+                    <td>{{t.losses}}</td>
+                    <td>{{t.goalsFor}}</td>
+                    <td>{{t.goalsAgainst}}</td>
+                    <td>{{t.goalDifference}}</td>
+                    <td>{{t.points}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

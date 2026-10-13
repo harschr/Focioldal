@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { TableRow } from './tableRow';
+import { PlTable } from './pl-table';
 
 
 @Injectable({
@@ -9,15 +9,15 @@ import { TableRow } from './tableRow';
 
 //ez a Service
 
-export class Table {
+export class PlTableService {
     private http: HttpClient;
 
     constructor(client: HttpClient) {
     this.http = client;
   }
 
-  getTable(){
-     return this.http.get<TableRow[]>("https://manutd-api.onrender.com/api/plTable"); // renderes api
+  getPlTable(){
+      return this.http.get<PlTable[]>('http://localhost:3000/api/plTable');
+    // ("https://manutd-api.onrender.com/api/plTable"); // renderes api
   }
-
 }

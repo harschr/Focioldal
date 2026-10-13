@@ -1,0 +1,128 @@
+/* A tabella környezete */
+.pl-container {
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+/* A táblázat */
+.pl-container table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Fejléc */
+.pl-container thead th {
+    background-color: #242b3a;
+    color: #ffffff;
+    padding: 16px 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    border: none;
+}
+
+/* Táblázat cellái */
+.pl-container tbody td {
+    padding: 13px 12px;
+    vertical-align: middle;
+    border-bottom: 1px solid #e9edf2;
+    color: #343a40;
+}
+
+/* Váltakozó háttérszín */
+.pl-container tbody tr:nth-child(even):not(.gold):not(.silver):not(.bronze) {
+    background-color: #f8f9fc;
+}
+
+/* Egér fölötti kiemelés */
+.pl-container tbody tr:not(.gold):not(.silver):not(.bronze):hover {
+    background-color: #edf2f7;
+    transition: background-color 0.2s ease;
+}
+
+/* Csapatnevek */
+.pl-container tbody td img {
+    object-fit: contain;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Pontszámok */
+.points {
+    font-weight: 700;
+    color: #202938 !important;
+}
+
+/* 1. helyezés – visszafogott arany */
+.gold>td {
+    background-color: #fff2c6 !important;
+    font-weight: 600;
+}
+
+/* 2. helyezés – ezüst */
+.silver>td {
+    background-color: #e9edf2 !important;
+    font-weight: 600;
+}
+
+/* 3. helyezés – bronz */
+.bronze>td {
+    background-color: #f7e2d5 !important;
+    font-weight: 600;
+}
+
+/* Mobilnézet */
+@media (max-width: 768px) {
+    .pl-container {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .pl-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .pl-container table {
+        font-size: 0.85rem;
+    }
+
+    .pl-container thead th,
+    .pl-container tbody td {
+        padding: 10px 8px;
+    }
+}
+
+/* Reszponzív táblázat */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* A táblázat ne zsugorodjon össze túlságosan */
+.pl-container .table-responsive table {
+    min-width: 900px;
+    margin-bottom: 0;
+}
+
+/* Kisebb képernyők */
+@media (max-width: 768px) {
+    .pl-container {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .pl-container h1 {
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+
+    .pl-container .table-responsive {
+        border-radius: 10px;
+    }
+}
