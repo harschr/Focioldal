@@ -34,13 +34,13 @@ export class ManUtd {
 
   teamLogos: { [key: string]: string } = {
     "Everton": "logos/everton.png",
-    "Hull City": "logos/hull-city-logo-footylogos-320.webp",
-    "Ipswich Town": "logos/ipswich-town.webp",
+    "Hull City": "logos/hull.webp",
+    "Ipswich Town": "logos/ipswich.webp",
     "Sabah": "logos/sabah.webp",
-    "Man City": "logos/mancity.png",
+    "Man City": "logos/city.png",
     "Brighton": "logos/brighton.png",
     "Fulham": "logos/fulham.png",
-    "Man Utd": "logos/mu.png",
+    "Man Utd": "logos/united.png",
     "Tottenham": "logos/tottenham.png",
     "Leeds Utd": "logos/leeds.png",
     "Atletico Madrid": "logos/atletico.png",
