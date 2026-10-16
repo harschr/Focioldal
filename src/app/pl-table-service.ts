@@ -17,7 +17,7 @@ export class PlTableService {
   }
 
   getPlTable(){
-      return this.http.get<PlTable[]>('http://localhost:3000/api/plTable');
-    // ("https://manutd-api.onrender.com/api/plTable"); // renderes api
+     // return this.http.get<PlTable[]>('http://localhost:3000/api/plTable'); //saját gépes szerver api
+    return this.http.get<PlTable[]>("https://manutd-api.onrender.com/api/plTable"); // renderes api
   }
 }
