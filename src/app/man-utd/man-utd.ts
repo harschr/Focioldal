@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, ChangeDetectorRef, signal } from '@angular/core';
 import { Matches } from '../matches';
 import { Match } from '../match';
 import { MatchWithMonth } from '../match';
@@ -52,7 +52,7 @@ export class ManUtd {
     "Roma": "logos/roma.webp"
   };
 
-  constructor(private matchesService: Matches) {
+  constructor(private matchesService: Matches, private cdr: ChangeDetectorRef) {
 
     console.log("1. A konstruktor lefutott", this);
 
@@ -91,6 +91,7 @@ export class ManUtd {
         // this.groupedMatches = grouped;
         this.groupedMatches.set(grouped);
         this.loading.set(false);
+        this.cdr.markForCheck();
       },
 
       error: (err: any) => {
