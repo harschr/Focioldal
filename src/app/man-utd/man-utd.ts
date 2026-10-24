@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, signal } from '@angular/core';
+import { Component, ChangeDetectorRef, signal } from '@angular/core'; //ChangeDetectorRef nélkül nem jelent meg a tabella az oldalon, csak frissítés után
 import { Matches } from '../matches';
 import { Match } from '../match';
 import { MatchWithMonth } from '../match';
