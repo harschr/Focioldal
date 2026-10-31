@@ -1,10 +1,357 @@
-/* A tabella környezete */
+.nbii-container {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    max-width: 1250px;
+}
+
+/* BAJNOKSÁG FEJLÉCE */
+
+.nbii-container .league-header {
+    background: linear-gradient(120deg, #102b4e, #174b78, #a52b36);
+    border-radius: 14px;
+    padding: 35px 40px;
+    color: white;
+    margin-bottom: 35px;
+    box-shadow: 0 5px 18px rgba(16, 43, 78, 0.18);
+}
+
+.nbii-container .league-header-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nbii-container .league-logo {
+    width: 75px;
+    height: 75px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.nbii-container .league-label {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    opacity: 0.8;
+    font-weight: 700;
+}
+
+.nbii-container .league-header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 5px 0;
+}
+
+.nbii-container .league-header p {
+    margin: 0;
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+/* TABELLACÍM */
+
+.nbii-container .table-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.nbii-container .table-heading h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #202536;
+    margin: 0 0 5px;
+}
+
+.nbii-container .table-heading p {
+    color: #7b8190;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.nbii-container .update-date {
+    color: #777e8e;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* TABELLÁK KÁRTYÁJA */
+
+.nbii-container .table-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(30, 35, 50, 0.07);
+    border: 1px solid #e9ebf0;
+}
+
+.nbii-container .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nbii-container .league-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 0.92rem;
+}
+
+/* TÁBLÁZAT FEJLÉCE */
+
+.nbii-container .league-table thead {
+    background: #f3f4f8;
+}
+
+.nbii-container .league-table thead th {
+    padding: 17px 12px;
+    color: #777e8e;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #e5e7ed;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.nbii-container .league-table thead th.team-column {
+    text-align: left;
+}
+
+/* TÁBLÁZAT SORAI */
+
+.nbii-container .league-table tbody td {
+    padding: 14px 12px;
+    text-align: center;
+    color: #363b49;
+    border-bottom: 1px solid #eff0f4;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.nbii-container .league-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.nbii-container .league-table tbody tr:hover {
+    background-color: #f5f7fa;
+}
+
+/* HELYEZÉS */
+
+.nbii-container .position-column {
+    width: 55px;
+}
+
+.nbii-container .position-number {
+    font-weight: 800;
+    color: #747b8b;
+    font-size: 0.95rem;
+}
+
+/* CSAPATOK */
+
+.nbii-container .team-column {
+    min-width: 210px;
+}
+
+.nbii-container .team-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    color: #242938;
+    text-align: left;
+}
+
+.nbii-container .team-info img {
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* PONTSZÁM */
+
+.nbii-container .points-column {
+    background: #f5f7fa;
+}
+
+.nbii-container .league-table tbody .points-column strong {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #174b78;
+}
+
+/* GÓLKÜLÖNBSÉG */
+
+.nbii-container .positive {
+    color: #18864b;
+    font-weight: 700;
+}
+
+.nbii-container .negative {
+    color: #d34b4b;
+    font-weight: 700;
+}
+
+/* ELSŐ HÁROM HELYEZETT */
+
+.nbii-container .league-table tbody tr.gold td:first-child {
+    border-left: 4px solid #e7b52c;
+}
+
+.nbii-container .league-table tbody tr.silver td:first-child {
+    border-left: 4px solid #9da6b5;
+}
+
+.nbii-container .league-table tbody tr.bronze td:first-child {
+    border-left: 4px solid #bd8054;
+}
+
+.nbii-container .league-table tbody tr.gold .position-number {
+    color: #b8860b;
+}
+
+.nbii-container .league-table tbody tr.silver .position-number {
+    color: #788494;
+}
+
+.nbii-container .league-table tbody tr.bronze .position-number {
+    color: #a9693e;
+}
+
+/* JELMAGYARÁZAT */
+
+.nbii-container .table-legend {
+    display: flex;
+    gap: 25px;
+    padding: 16px 20px;
+    border-top: 1px solid #eff0f4;
+    color: #777e8e;
+    font-size: 0.8rem;
+}
+
+.nbii-container .table-legend span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.nbii-container .legend-indicator {
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+}
+
+.nbii-container .legend-indicator.champion {
+    background: #e7b52c;
+}
+
+.nbii-container .legend-indicator.second {
+    background: #9da6b5;
+}
+
+.nbii-container .legend-indicator.third {
+    background: #bd8054;
+}
+
+/* LÁBLÉC */
+
+.nbii-container .table-footer {
+    margin-top: 15px;
+    font-size: 0.78rem;
+    color: #858b99;
+    line-height: 1.7;
+}
+
+/* MOBILNÉZET */
+
+@media (max-width: 768px) {
+
+    .nbii-container {
+        padding: 15px 8px 35px;
+    }
+
+    .nbii-container .league-header {
+        padding: 25px 20px;
+        margin-bottom: 25px;
+    }
+
+    .nbii-container .league-logo {
+        width: 58px;
+        height: 58px;
+        font-size: 1.2rem;
+    }
+
+    .nbii-container .league-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .nbii-container .league-header p {
+        font-size: 0.8rem;
+    }
+
+    .nbii-container .table-heading h2 {
+        font-size: 1.35rem;
+    }
+
+    .nbii-container .update-date {
+        font-size: 0.7rem;
+    }
+
+    .nbii-container .league-table {
+        font-size: 0.82rem;
+    }
+
+    .nbii-container .league-table thead th {
+        padding: 13px 10px;
+    }
+
+    .nbii-container .league-table tbody td {
+        padding: 12px 10px;
+    }
+
+    .nbii-container .team-column {
+        min-width: 175px;
+    }
+
+    .nbii-container .team-info {
+        gap: 8px;
+    }
+
+    .nbii-container .team-info img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .nbii-container .table-legend {
+        gap: 15px;
+        flex-wrap: wrap;
+        padding: 14px;
+    }
+
+    .nbii-container .table-footer {
+        font-size: 0.72rem;
+    }
+}
+
+
+
+/* A tabella környezete
 .pl-container {
     padding-top: 30px;
     padding-bottom: 40px;
 }
 
-/* A táblázat */
+/* A táblázat
 .pl-container table {
     width: 100%;
     border-collapse: separate;
@@ -15,7 +362,7 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Fejléc */
+/* Fejléc
 .pl-container thead th {
     background-color: #242b3a;
     color: #ffffff;
@@ -26,7 +373,7 @@
     border: none;
 }
 
-/* Táblázat cellái */
+/* Táblázat cellái
 .pl-container tbody td {
     padding: 13px 12px;
     vertical-align: middle;
@@ -34,49 +381,49 @@
     color: #343a40;
 }
 
-/* Váltakozó háttérszín */
+/* Váltakozó háttérszín
 .pl-container tbody tr:nth-child(even):not(.gold):not(.silver):not(.bronze) {
     background-color: #f8f9fc;
 }
 
-/* Egér fölötti kiemelés */
+/* Egér fölötti kiemelés
 .pl-container tbody tr:not(.gold):not(.silver):not(.bronze):hover {
     background-color: #edf2f7;
     transition: background-color 0.2s ease;
 }
 
-/* Csapatnevek */
+/* Csapatnevek
 .pl-container tbody td img {
     object-fit: contain;
     margin-right: 8px;
     vertical-align: middle;
 }
 
-/* Pontszámok */
+/* Pontszámok
 .points {
     font-weight: 700;
     color: #202938 !important;
 }
 
-/* 1. helyezés – visszafogott arany */
+/* 1. helyezés – visszafogott arany
 .gold>td {
     background-color: #fff2c6 !important;
     font-weight: 600;
 }
 
-/* 2. helyezés – ezüst */
+/* 2. helyezés – ezüst
 .silver>td {
     background-color: #e9edf2 !important;
     font-weight: 600;
 }
 
-/* 3. helyezés – bronz */
+/* 3. helyezés – bronz
 .bronze>td {
     background-color: #f7e2d5 !important;
     font-weight: 600;
 }
 
-/* Mobilnézet */
+/* Mobilnézet
 @media (max-width: 768px) {
     .pl-container {
         padding-left: 8px;
@@ -97,20 +444,20 @@
     }
 }
 
-/* Reszponzív táblázat */
+/* Reszponzív táblázat
 .table-responsive {
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
 
-/* A táblázat ne zsugorodjon össze túlságosan */
+/* A táblázat ne zsugorodjon össze túlságosan
 .pl-container .table-responsive table {
     min-width: 900px;
     margin-bottom: 0;
 }
 
-/* Kisebb képernyők */
+/* Kisebb képernyők
 @media (max-width: 768px) {
     .pl-container {
         padding-left: 8px;
@@ -125,4 +472,4 @@
     .pl-container .table-responsive {
         border-radius: 10px;
     }
-}
+}*/
