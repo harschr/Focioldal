@@ -10,7 +10,12 @@ import { NBIITableService } from '../nbii-table-service';
   templateUrl: './nb-ii.html',
 })
 export class NbII {
- table: NBIITable[] = []; //tomb, ami jon az api-bol
+  table: NBIITable[] = []; //tomb, ami jon az api-bol
+  day: number = new Date().getDate();
+  month: number = new Date().getMonth() + 1;
+  year: number = new Date().getFullYear();
+
+  date: string = String(this.year + ". " + this.month + ". " + this.day);
 
   constructor(private tableService: NBIITableService, private cdr: ChangeDetectorRef) {
     tableService.getNBIITable().subscribe({
