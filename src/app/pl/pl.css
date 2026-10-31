@@ -9,7 +9,7 @@
 .league-header {
     background: linear-gradient(120deg, #32105b, #5b247a, #8b3d91);
     border-radius: 14px;
-    padding: 35px 40px;
+    padding: 15px 40px;
     color: white;
     margin-bottom: 35px;
     box-shadow: 0 5px 18px rgba(50, 16, 91, 0.18);
@@ -35,8 +35,8 @@
 }
 
 .league-label {
-    font-size: 0.75rem;
-    letter-spacing: 3px;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
     opacity: 0.8;
     font-weight: 700;
 }
@@ -59,7 +59,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 18px;
+    margin-bottom: 30px;
 }
 
 .table-heading h2 {
@@ -77,8 +77,8 @@
 
 .update-date {
     color: #777e8e;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 1.00rem;
+    font-weight: 700;
 }
 
 /* TABELLÁK KÁRTYÁJA */

@@ -15,7 +15,7 @@ export class NbII {
   month: number = new Date().getMonth() + 1;
   year: number = new Date().getFullYear();
 
-  date: string = String(this.year + ". " + this.month + ". " + this.day);
+  date: string = String(this.year + "." + this.month + "." + this.day);
 
   constructor(private tableService: NBIITableService, private cdr: ChangeDetectorRef) {
     tableService.getNBIITable().subscribe({

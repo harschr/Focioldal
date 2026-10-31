@@ -15,7 +15,7 @@ export class PL {
   month: number = new Date().getMonth() + 1;
   year: number = new Date().getFullYear();
   
-  date: string = String(this.year + ". " + this.month + ". " + this.day);
+  date: string = String(this.year + "." + this.month + "." + this.day);
 
   constructor(private tableService: PlTableService, private cdr: ChangeDetectorRef) {
     tableService.getPlTable().subscribe({
