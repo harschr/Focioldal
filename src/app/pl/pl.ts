@@ -11,6 +11,11 @@ import { PlTableService } from '../pl-table-service';
 
 export class PL {
   table: PlTable[] = []; //tomb, ami jon az api-bol
+  day : number = new Date().getDate();
+  month: number = new Date().getMonth();
+  year: number = new Date().getFullYear();
+  
+  date: string = String(this.year + "." + this.month + "." + this.day);
 
   constructor(private tableService: PlTableService, private cdr: ChangeDetectorRef) {
     tableService.getPlTable().subscribe({
