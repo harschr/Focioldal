@@ -1,3 +1,82 @@
+<nav class="navbar navbar-expand-lg site-navbar">
+  <div class="container">
+
+    <a class="navbar-brand" routerLink="/">
+      <span class="brand-icon">⚽</span>
+      <span>FOCI<span class="brand-highlight">OLDAL</span></span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Navigáció megnyitása">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="manutd" routerLinkActive="active">
+            Manchester United
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="pl" routerLinkActive="active">
+            Premier League
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="vidi" routerLinkActive="active">
+            Videoton
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="nbII" routerLinkActive="active">
+            NB II
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+</nav>
+
+<main class="site-main">
+  <router-outlet />
+</main>
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <div class="footer-content">
+
+      <div class="footer-brand">
+        <span class="footer-ball">⚽</span>
+        <span>FOCI<span>OLDAL</span></span>
+      </div>
+
+      <div class="footer-text">
+        Futballeredmények, tabellák és statisztikák
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2026 Focioldal. Minden jog fenntartva.
+    </div>
+
+  </div>
+
+</footer>
+
+<!--
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
   <div class="container">
     <a class="navbar-brand" href="#">Focioldal</a>
@@ -32,3 +111,4 @@
 <footer class="bg-dark text-center text-white">
   <h4 class="py-2">&copy; Focioldal</h4>
 </footer>
+-->
