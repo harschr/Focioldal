@@ -202,30 +202,38 @@
     font-weight: 700;
 }
 
-/* ELSŐ HÁROM HELYEZETT */
+/* KÜLÖNLEGES SOROK */
 
-.nbii-container .league-table tbody tr.gold td:first-child {
+.nbii-container .league-table tbody tr.promotion td:first-child {
     border-left: 4px solid #e7b52c;
 }
 
-.nbii-container .league-table tbody tr.silver td:first-child {
+.nbii-container .league-table tbody tr.playoff td:first-child {
     border-left: 4px solid #9da6b5;
 }
 
-.nbii-container .league-table tbody tr.bronze td:first-child {
-    border-left: 4px solid #bd8054;
-}
-
-.nbii-container .league-table tbody tr.gold .position-number {
+.nbii-container .league-table tbody tr.promotion .position-number {
     color: #b8860b;
 }
 
-.nbii-container .league-table tbody tr.silver .position-number {
+.nbii-container .league-table tbody tr.playoff .position-number {
     color: #788494;
 }
 
-.nbii-container .league-table tbody tr.bronze .position-number {
-    color: #a9693e;
+.nbii-container .league-table tbody tr.vidiRow {
+    border-left: 5px solid red;
+}
+
+.nbii-container .league-table tbody tr.vidiRow .position-number {
+    color: red;
+}
+
+.nbii-container .league-table tbody tr.relegation {
+    border-left: 4px solid black;
+}
+
+.nbii-container .league-table tbody tr.relegation .position-number {
+    color: black;
 }
 
 /* JELMAGYARÁZAT */
@@ -259,8 +267,12 @@
     background: #9da6b5;
 }
 
-.nbii-container .legend-indicator.third {
-    background: #bd8054;
+.nbii-container .legend-indicator.videoton {
+    background: red;
+}
+
+.nbii-container .legend-indicator.relegation {
+    background: black;
 }
 
 /* LÁBLÉC */

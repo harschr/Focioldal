@@ -41,7 +41,9 @@
                     <tr *ngFor="let t of table; let i = index" [ngClass]="{
                         'gold': i === 0,
                         'silver': i === 1,
-                        'bronze': i === 2
+                        'bronze': i === 2,
+                        'manURow': t.name === 'Manchester United',
+                        'relegation': i ===17 || i === 18 || i === 19
                     }">
 
                         <td class="position-column">
@@ -75,9 +77,11 @@
         </div>
 
         <div class="table-legend">
+            <span><i class="legend-indicator mu"></i> Manchester United</span>
             <span><i class="legend-indicator champion"></i> 1. hely</span>
             <span><i class="legend-indicator second"></i> 2. hely</span>
             <span><i class="legend-indicator third"></i> 3. hely</span>
+            <span><i class="legend-indicator relegation"></i> Kiesők</span>
         </div>
     </div>
 

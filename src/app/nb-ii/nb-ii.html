@@ -39,9 +39,10 @@
 
                 <tbody>
                     <tr *ngFor="let t of table; let i = index" [ngClass]="{
-                        'gold': i === 0,
-                        'silver': i === 1,
-                        'bronze': i === 2
+                        'promotion': i === 0,
+                        'playoff': i === 1,
+                        'vidiRow': t.name === 'Videoton',
+                        'relegation': i === 14 || i === 15,
                     }">
 
                         <td class="position-column">
@@ -50,8 +51,10 @@
 
                         <td class="team-column">
                             <div class="team-info">
+
                                 <img [src]="t.logo" [alt]="t.name + ' címere'" width="30" height="30">
                                 <span>{{ t.name }}</span>
+
                             </div>
                         </td>
 
@@ -66,7 +69,7 @@
                                 {{ t.goalDifference > 0 ? '+' : '' }}{{ t.goalDifference }}
                             </span>
                         </td>
-                        <td class="points-column">
+                        <td>
                             <strong>{{ t.points }}</strong>
                         </td>
                     </tr>
@@ -75,9 +78,10 @@
         </div>
 
         <div class="table-legend">
+            <span><i class="legend-indicator videoton"></i> Videoton</span>
             <span><i class="legend-indicator champion"></i> 1. hely</span>
             <span><i class="legend-indicator second"></i> 2. hely</span>
-            <span><i class="legend-indicator third"></i> 3. hely</span>
+            <span><i class="legend-indicator relegation"></i> Kiesők</span>
         </div>
     </div>
 

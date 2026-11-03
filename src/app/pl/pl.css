@@ -202,7 +202,7 @@
     font-weight: 700;
 }
 
-/* ELSŐ HÁROM HELYEZETT */
+/* KÜLÖNLEGES HELYEZÉSEK */
 
 .league-table tbody tr.gold td:first-child {
     border-left: 4px solid #e7b52c;
@@ -226,6 +226,22 @@
 
 .league-table tbody tr.bronze .position-number {
     color: #a9693e;
+}
+
+.league-table tbody tr.manURow {
+    border-left: 5px solid red;
+}
+
+.league-table tbody tr.manURow .position-number {
+    color: red;
+}
+
+.league-table tbody tr.relegation {
+    border-left: 4px solid black;
+}
+
+.league-table tbody tr.relegation .position-number {
+    color: black;
 }
 
 /* JELMAGYARÁZAT */
@@ -261,6 +277,14 @@
 
 .legend-indicator.third {
     background: #bd8054;
+}
+
+.legend-indicator.mu {
+    background: red;
+}
+
+.legend-indicator.relegation {
+    background: black;
 }
 
 /* LÁBLÉC */
